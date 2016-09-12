@@ -8,16 +8,16 @@
     <header class="page-header">
       <section class="page-header__top-menu">
         <div class="page-header__logo">
-          <a href="#"><img src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»"></a>
+          <a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»"></a>
         </div>
         <nav class="main-nav  main-nav--closed">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
-            <ul class="main-nav__menu-items">
+            <ul class="main-nav__menu-list">
               <li class="main-nav__menu-item"><a href="#">Каталог товаров</a></li>
-              <li class="main-nav__menu-item"><a href="#">Вязания на заказ</a></li>
+              <li class="main-nav__menu-item"><a href="form.html">Вязания на заказ</a></li>
             </ul>
-            <ul class="main-nav__user-items">
+            <ul class="main-nav__user-menu">
               <li class="main-nav__user-item"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
               <li class="main-nav__user-item"><a class="main-nav__cart" href="#">Корзина: пока пуста</a></li>
             </ul>
@@ -25,31 +25,31 @@
         </nav>
       </section>
       <section class="page-header__content">
-        <b class="page-header__content-title">Каталог товаров</b>
+        <h1 class="page-header__content-title">Каталог товаров</h1>
       </section>
     </header>
     <main>
-      <section class="goods">
-        <article class="goods-item">
+      <section class="product-catalog">
+        <article class="product">
           <a href="#"><img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик"></a>
-          <a class="goods-item__title" href="#">Зайчик-попрыгайчик</a>
-          <span class="goods-item__properties">Рост 30 см, вес 200 г</span>
-          <b class="goods-item__price">1 200 руб.</b>
-          <a class="goods-item__buy" href="#">Заказать</a>
+          <a class="product__title" href="#">Зайчик-попрыгайчик</a>
+          <span class="product__properties">Рост 30 см, вес 200 г</span>
+          <b class="product__cy">1 200 руб.</b>
+          <a class="product__buy" href="#">Заказать</a>
         </article>
-        <article class="goods-item">
+        <article class="product">
           <a href="#"><img src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья"></a>
-          <a class="goods-item__title" href="#">Корзинка для белья</a>
-          <span class="goods-item__properties">Диаметр 15 см, высота 10 см</span>
-          <b class="goods-item__price">690 руб.</b>
-          <a class="goods-item__buy" href="#">Заказать</a>
+          <a class="product__title" href="#">Корзинка для белья</a>
+          <span class="product__properties">Диаметр 15 см, высота 10 см</span>
+          <b class="product__cy">690 руб.</b>
+          <a class="product__buy" href="#">Заказать</a>
         </article>
-        <article class="goods-item">
+        <article class="product">
           <a href="#"><img src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек"></a>
-          <a class="goods-item__title" href="#">Большая корзинка для игрушек</a>
-          <span class="goods-item__properties">Диаметр 30 см, высота 30 см</span>
-          <b class="goods-item__price">1 500 руб.</b>
-          <a class="goods-item__buy" href="#">Заказать</a>
+          <a class="product__title" href="#">Большая корзинка для игрушек</a>
+          <span class="product__properties">Диаметр 30 см, высота 30 см</span>
+          <b class="product__cy">1 500 руб.</b>
+          <a class="product__buy" href="#">Заказать</a>
         </article>
       </section>
       <section class="production">
@@ -62,17 +62,17 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__social">
+      <div class="page-footer__social">
         <a class="btn-social btn-social--instagram" href="#">Instagram</a>
         <a class="btn-social btn-social--facebook" href="#">Facebook</a>
         <a class="btn-social btn-social--twitter" href="#">Twitter</a>
-      </section>
-      <section class="page-footer__developer">
+      </div>
+      <div class="page-footer__copyright">
         <p>
           Разработано
           <a href="#"><img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"></a>
         </p>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
