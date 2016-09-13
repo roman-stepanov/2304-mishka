@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <section class="page-header__top-menu">
+        <div class="page-header__logo">
+          <a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»"></a>
+        </div>
+        <nav class="main-nav  main-nav--closed">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__menu-list">
+              <li class="main-nav__menu-item"><a href="catalog.html">Каталог товаров</a></li>
+              <li class="main-nav__menu-item"><a href="#">Вязания на заказ</a></li>
+            </ul>
+            <ul class="main-nav__user-menu">
+              <li class="main-nav__user-item"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
+              <li class="main-nav__user-item"><a class="main-nav__cart" href="#">Корзина: пока пуста</a></li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <section class="page-header__content">
+        <h1 class="page-header__content-title">Вязание на заказ</h1>
+      </section>
+    </header>
+    <main>
+      <form class="knitting-form" action="#" method="post">
+        <p class="knitting-form__desc">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <fieldset class="knitting-form__type">
+          <legend>Тип</legend>
+          <label for="knitting-type1"><input type="radio" name="knitting-type" value="knitting-type1" id="knitting-type1" checked>Аксессуар для интерьера</label>
+          <label for="knitting-type2"><input type="radio" name="knitting-type" value="knitting-type2" id="knitting-type2">Детская игрушка</label>
+        </fieldset>
+        <fieldset class="knitting-form__color">
+          <legend>Цвет</legend>
+          <label for="cl-white"><input type="checkbox" name="cl-white" id="cl-white" checked>Белый</label>
+          <label for="cl-gray"><input type="checkbox" name="cl-gray" id="cl-gray" checked>Серый</label>
+          <label for="cl-tiffany"><input type="checkbox" name="cl-tiffany" id="cl-tiffany">«Тиффани»</label>
+          <label for="cl-black"><input type="checkbox" name="cl-black" id="cl-black">Черный</label>
+          <label for="cl-pink"><input type="checkbox" name="cl-pink" id="cl-pink">Розовый</label>
+          <label for="cl-orange"><input type="checkbox" name="cl-orange" id="cl-orange">Оранжевый</label>
+        </fieldset>
+        <fieldset class="knitting-form__user-name">
+          <legend>ФИО</legend>
+          <label for="name">Имя:</label>
+          <input type="text" name="name" id="name" placeholder="Введите ваше имя">
+          <label for="surname">Фамилия:</label>
+          <input type="text" name="surname" id="surname" placeholder="Укажите фамилию">
+          <label for="patronymic">Отчество:</label>
+          <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+        </fieldset>
+        <fieldset class="knitting-form__tel">
+          <legend>Тел</legend>
+          <input type="tel" name="tel" placeholder="+7 XXX XXX XX XX">
+        </fieldset>
+        <fieldset class="knitting-form__email">
+          <legend>E-mail</legend>
+          <input type="email" name="email" placeholder="Ваш Email">
+        </fieldset>
+        <fieldset class="knitting-form__additional">
+          <legend>Доп</legend>
+          <textarea name="additional" id="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <span>Все поля обязательны для заполнения</span>
+        <button class="knitting-form__send  btn" type="submit">Отправить заказ</button>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social">
+        <a class="btn-social btn-social--instagram" href="#">Instagram</a>
+        <a class="btn-social btn-social--facebook" href="#">Facebook</a>
+        <a class="btn-social btn-social--twitter" href="#">Twitter</a>
+      </div>
+      <div class="page-footer__copyright">
+        <p>
+          Разработано
+          <a href="#"><img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
