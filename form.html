@@ -3,32 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <section class="page-header__top-menu">
-        <div class="page-header__logo">
-          <a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»"></a>
+        <div class="logo">
+          <a class="logo__link" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»"></a>
         </div>
-        <nav class="main-nav  main-nav--closed">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="main-nav">
+          <!--button class="main-nav__toggle" type="button">Меню</button-->
           <div class="main-nav__wrapper">
             <ul class="main-nav__menu-list">
-              <li class="main-nav__menu-item"><a href="catalog.html">Каталог товаров</a></li>
-              <li class="main-nav__menu-item"><a href="#">Вязания на заказ</a></li>
+              <li class="main-nav__menu-item"><a class="main-nav__menu-link" href="catalog.html">Каталог товаров</a></li>
+              <li class="main-nav__menu-item"><a class="main-nav__menu-link" href="form.html">Вязания на заказ</a></li>
             </ul>
-            <ul class="main-nav__user-menu">
-              <li class="main-nav__user-item"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
-              <li class="main-nav__user-item"><a class="main-nav__cart" href="#">Корзина: пока пуста</a></li>
+            <ul class="main-nav__menu-list">
+              <li class="main-nav__menu-item"><a class="main-nav__menu-link  main-nav__menu-link--search" href="#">Поиск по сайту</a></li>
+              <li class="main-nav__menu-item"><a class="main-nav__menu-link  main-nav__menu-link--cart" href="#">Корзина: пока пуста</a></li>
             </ul>
           </div>
         </nav>
       </section>
-      <section class="page-header__content">
-        <h1 class="page-header__content-title">Вязание на заказ</h1>
-      </section>
     </header>
     <main>
+      <h1 class="page-title">Вязание на заказ</h1>
       <form class="knitting-form" action="#" method="post">
         <p class="knitting-form__desc">
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
@@ -68,21 +67,19 @@
           <legend>Доп</legend>
           <textarea name="additional" id="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
-        <span>Все поля обязательны для заполнения</span>
-        <button class="knitting-form__send  btn" type="submit">Отправить заказ</button>
+        <span class="knitting-form__required">Все поля обязательны для заполнения</span>
+        <button class="btn knitting-form__send" type="submit">Отправить заказ</button>
       </form>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__social">
-        <a class="btn-social btn-social--instagram" href="#">Instagram</a>
-        <a class="btn-social btn-social--facebook" href="#">Facebook</a>
-        <a class="btn-social btn-social--twitter" href="#">Twitter</a>
+      <div class="social">
+        <a class="social-btn  social-btn--instagram" href="#">Instagram</a>
+        <a class="social-btn  social-btn--facebook" href="#">Facebook</a>
+        <a class="social-btn  social-btn--twitter" href="#">Twitter</a>
       </div>
-      <div class="page-footer__copyright">
-        <p>
-          Разработано
-          <a href="#"><img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"></a>
-        </p>
+      <div class="copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__link" href="htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
       </div>
     </footer>
   </body>
