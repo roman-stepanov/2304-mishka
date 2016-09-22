@@ -1,0 +1,24 @@
+.product-catalog {
+  display: flex;
+  flex-direction: column;
+
+  width: 260px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+@media @tablet-widths {
+  .product-catalog {
+    width: 668px;
+  }
+}
+
+@media @desktop-widths {
+  .product-catalog {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1050px;
+  }
+}
