@@ -1,3 +1,30 @@
 .page-footer {
   background-color: @cl-light-gray;
+  margin: 40px 0 0 0;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 260px;
+  margin: 0 auto;
+}
+
+
+@media @tablet-widths {
+  .page-footer__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 668px;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer__wrapper {
+    width: 1050px;
+  }
 }

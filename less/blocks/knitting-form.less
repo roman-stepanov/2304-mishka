@@ -1,24 +1,177 @@
 .knitting-form {
   margin: 0;
-  padding: 30px 0 50px 0;
+  padding: 0;
 }
 
 .knitting-form__desc {
-  margin: 0;
-  padding: 0;
+  width: 260px;
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
   font-size: 13px;
   line-height: 24px;
   color: @cl-gray;
 }
 
+.knitting-form__fieldset {
+
+  &--type {
+
+    /*временно*/
+    min-height: 150px;
+  }
+
+  &--color {
+
+   /*временно*/
+    min-height: 410px;
+  }
+
+  &--user {
+
+   /*временно*/
+    min-height: 330px;
+  }
+
+  &--tel {
+
+    /*временно*/
+    min-height: 100px;
+  }
+
+  &--email {
+
+    /*временно*/
+    min-height: 100px;
+  }
+
+  &--additional {
+
+    /*временно*/
+    min-height: 200px;
+  }
+}
+
+
+
+.knitting-form__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 260px;
+  margin: 0 auto;
+}
+
+.knitting-form__legend {
+  font-family: @font-bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: @cl-turquoise;
+}
+
+.knitting-form__fieldset-items {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.knitting-form__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  margin: 0 auto;
+}
+
+
 .knitting-form__required {
-  margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 1;
+  text-align: center;
   color: @cl-gray;
 }
 
 .knitting-form__send {
-  width: 256px;
+  width: 260px;
+  margin: 0 auto;
+}
+
+
+
+@media @tablet-widths {
+  .knitting-form__desc {
+    width: 668px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .knitting-form__fieldset {
+    width: 100vw;
+
+    &--type {
+
+      /*временно*/
+      min-height: 210px;
+    }
+
+    &--color {
+      background-color: @cl-light-gray;
+
+      /*временно*/
+      min-height: 325px;
+    }
+
+    &--tel {
+      background-color: @cl-light-gray;
+    }
+
+    &--email {
+      background-color: @cl-light-gray;
+    }
+  }
+
+  .knitting-form__fieldset-wrapper {
+    flex-direction: row;
+
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .knitting-form__legend {
+    width: 165px;
+  }
+
+  .knitting-form__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 668px;
+  }
+
+  .knitting-form__send {
+    order: -1;
+
+    width: 230px;
+    margin: 0;
+  }
+}
+
+
+@media @desktop-widths {
+  .knitting-form__desc {
+    width: 700px;
+
+  }
+
+  .knitting-form__fieldset-wrapper {
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .knitting-form__wrapper {
+    width: 700px;
+  }
 }
