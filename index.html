@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -16,18 +17,18 @@
             </a>
           </div>
           <ul class="main-nav__menu-list  main-nav__menu-list--main">
-            <li class="main-nav__menu-item">
+            <li class="main-nav__menu-item  main-nav__menu-item--main">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="main-nav__menu-item">
+            <li class="main-nav__menu-item  main-nav__menu-item--main">
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__menu-list  main-nav__menu-list--user">
-            <li class="main-nav__menu-item">
+            <li class="main-nav__menu-item   main-nav__menu-item--user">
               <a class="main-nav__link  main-nav__link--search" href="#">Поиск по сайту</a>
             </li>
-            <li class="main-nav__menu-item">
+            <li class="main-nav__menu-item  main-nav__menu-item--user">
               <a class="main-nav__link  main-nav__link--cart" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
@@ -45,18 +46,24 @@
     </header>
     <main>
       <section class="page-title  page-title--index">
-        <h1 class="page-title__label">Милые штуки <br>ручной<br> работы для дома</h1>
+        <h1 class="page-title__label  page-title__label--index">Милые штуки <br>ручной<br> работы для дома</h1>
       </section>
       <section class="product-type">
         <ul class="product-type__list">
-          <li class="product-type__item"><a class="product-type__link product-type__link--interior" href="#">Предметы<br>интерьера</a></li>
-          <li class="product-type__item"><a class="product-type__link product-type__link--toys" href="#">Детские<br>игрушки</a></li>
+          <li class="product-type__item">
+            <a class="product-type__link product-type__link--interior" href="#">Предметы<br>интерьера</a>
+          </li>
+          <li class="product-type__item">
+            <a class="product-type__link product-type__link--toys" href="#">Детские<br>игрушки</a>
+          </li>
         </ul>
       </section>
       <section class="product-week">
         <div class="product-week__wrapper">
-          <h2 class="product-week__title">Вязаные корзинки</h2>
-          <span class="product-week__label">товар недели</span>
+          <header class="product-week__header">
+            <h2 class="product-week__title">Вязаные корзинки</h2>
+            <span class="product-week__label">товар недели</span>
+          </header>
           <p class="product-week__desc">
             Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
           </p>
@@ -74,21 +81,24 @@
               <td>15 см</td>
             </tr>
           </table>
-          <img class="product-week__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки">
-          <b class="product-week__cy">Цена: 990 руб.</b>
-          <a class="btn  product-week__buy" href="#">Заказать</a>
+          <!--img class="product-week__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки"-->
+          <div class="product-week__img"></div>
+          <footer class="product-week__footer">
+            <b class="product-week__cy">Цена: 990 руб.</b>
+            <a class="btn  product-week__buy" href="#">Заказать</a>
+          </footer>
         </div>
       </section>
       <section class="about-us">
         <div class="about-us__wrapper">
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__list-features">
-            <li class="about-us__item  about-us__item--ecology">Экологически чистые материалы</li>
-            <li class="about-us__item  about-us__item--price">Скандинавский стиль по российской цене</li>
-            <li class="about-us__item  about-us__item--like">Увеличивает лайки на фотографиях</li>
-            <li class="about-us__item  about-us__item--love">Связано вручную с любовью и умилением</li>
-            <li class="about-us__item  about-us__item--home">Поддержка отечественного производителя</li>
-            <li class="about-us__item  about-us__item--gift">Поставляется в подарочной упаковке</li>
+            <li class="about-us__item  about-us__item--ecology">Экологически<br>чистые материалы</li>
+            <li class="about-us__item  about-us__item--price">Скандинавский стиль<br>по российской цене</li>
+            <li class="about-us__item  about-us__item--like">Увеличивает лайки<br>на фотографиях</li>
+            <li class="about-us__item  about-us__item--love">Связано вручную с<br>любовью и умилением</li>
+            <li class="about-us__item  about-us__item--home">Поддержка отечественного<br>производителя</li>
+            <li class="about-us__item  about-us__item--gift">Поставляется в<br>подарочной упаковке</li>
           </ul>
         </div>
       </section>
@@ -112,17 +122,18 @@
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__content">
-            <tr>
-              <td>email:</td>
-              <td><a class="contacts__content-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-            </tr>
-            <tr>
-              <td>адрес:</td>
-              <td>г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
-            </tr>
-          </table>
-          <img class="contacts__map" src="img/map-mobile@1x.jpg" width="320" height="457" alt="Интернет-магазин «Мишка»">
+          <div class="contacts__list">
+            <div class="contacts__item">
+              <div class="contacts__item-title">e-mail:</div>
+              <div class="contacts__item-text"><a class="contacts__content-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__item-title">адрес:</div>
+              <div class="contacts__item-text">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</div>
+            </div>
+          </div>
+          <!--img class="contacts__map" src="img/map-mobile@1x.jpg" width="320" height="457" alt="Интернет-магазин «Мишка»"-->
+          <div class="contacts__map"></div>
           <a class="btn  contacts__write-us" href="#">Напишите нам</a>
         </div>
       </section>
