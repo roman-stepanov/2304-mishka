@@ -1,14 +1,14 @@
 .modal-size {
   margin: 0;
-  padding: 35px 0 45px 0;
-  width: 320px;
+  padding: 30px 0 46px 0;
+  width: 318px;
   border: 1px solid #c7c7c7;
 }
 
 .modal-size__title {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 0 80px 0 80px;
   font-family: @font-bold;
   font-size: 25px;
   font-weight: 700;
@@ -19,17 +19,50 @@
 
 .modal-size__label {
   margin: 0;
-  padding: 0;
+  padding: 12px 0 23px 0;
   font-size: 15px;
   line-height: 30px;
   text-align: center;
   color: @cl-gray;
 }
 
+.modal-size__toggles {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.modal-size__form input {
+  display: none;
+}
+
+.modal-size__btn-size {
+  display: block;
+  width: 78px;
+  margin: 0;
+  padding: 14px 0 17px 0;
+  font-family: @font-bold;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  border: 2px solid #ececec;
+  cursor: pointer;
+}
+
+.modal-size__form input:checked + .modal-size__btn-size {
+  border-color: #62d1ba;
+}
+
+.modal-size__btn-size:hover {
+  border-color: #c7c7c7;
+}
+
 .modal-size__add {
   display: block;
-  margin: 30px auto 0 auto;
-  padding: 20px;
+  margin: 31px auto 0 auto;
+  padding: 15px 0 18px 0;
   width: 260px;
   font-family: @font-bold;
   font-size: 17px;
@@ -45,16 +78,27 @@
 
 @media @tablet-widths {
   .modal-size {
-    width: 568px;
+    width: 566px;
+    padding: 32px 0 46px 0;
   }
 
   .modal-size__title {
+    padding: 0;
     font-size: 30px;
     line-height: 57px;
   }
 
   .modal-size__label {
+    padding: 14px 0 22px 0;
     font-size: 17px;
+  }
+
+  .modal-size__toggles {
+    width: 350px;
+  }
+
+  .modal-size__btn-size {
+    width: 108px;
   }
 
   .modal-size__add {
