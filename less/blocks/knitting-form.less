@@ -1,15 +1,42 @@
 .knitting-form {
   margin: 0;
-  padding: 0;
+  padding: 23px 0 55px 0;
 }
 
 .knitting-form__desc {
   width: 260px;
   margin: 0 auto;
-  padding: 22px 0 23px 0;
+  padding: 0;
   font-size: 13px;
   line-height: 24px;
   color: @cl-gray;
+}
+
+.knitting-form__fieldset {
+
+  &--type {
+    padding: 21px 0 0 0;
+  }
+
+  &--color {
+    padding: 26px 0 0 0;
+  }
+
+  &--name {
+    padding: 30px 0 0 0;
+  }
+
+  &--tel {
+    padding: 31px 0 0 0;
+  }
+
+  &--email {
+    padding: 37px 0 0 0;
+  }
+
+  &--additional {
+    padding: 31px 0 0 0;
+  }
 }
 
 .knitting-form__fieldset-wrapper {
@@ -18,12 +45,13 @@
 
   width: 260px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .knitting-form__legend {
   position: relative;
-  margin: 0 0 0 0;
-  padding: 0 0 25px 0;
+  margin: 0;
+  padding: 0;
   font-family: @font-bold;
   font-size: 17px;
   line-height: 17px;
@@ -33,10 +61,34 @@
   &::before {
     content: "";
     position: absolute;
-    top: 9px;
+    top: 10px;
     right: 0;
     width: 198px;
     border-top: 1px solid @cl-turquoise;
+  }
+
+  &--type {
+    margin: 0 0 15px 0;
+  }
+
+  &--color {
+    margin: 0 0 5px 0;
+  }
+
+  &--name {
+    margin: 0 0 12px 0;
+  }
+
+  &--tel {
+    margin: 0 0 8px 0;
+  }
+
+  &--email {
+    margin: 0 0 8px 0;
+  }
+
+  &--additional {
+    margin: 0 0 34px 0;
   }
 }
 
@@ -45,64 +97,18 @@
   flex-direction: column;
 }
 
-.test-block {
-  background-color: red;
-}
-
-.knitting-form__label-radio {
-  position: relative;
-  margin: 0 0 30px 62px;
-  font-family: @font-bold;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 18px;
-}
-
-.knitting-form__label-checkbox {
-  position: relative;
-  margin: 0 0 43px 62px;
-  font-family: @font-bold;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 18px;
-}
-
 .knitting-form__input-radio,
 .knitting-form__input-checkbox {
   display: none;
 }
 
-.knitting-form__input-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 20px 0;
-}
-
-.knitting-form__label {
+.knitting-form__label-radio {
+  position: relative;
+  margin: 20px 0 10px 62px;
   font-family: @font-bold;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
-}
-
-.knitting-form__input-text,
-.knitting-form__input-tel,
-.knitting-form__input-email {
-  padding: 18px 0 18px 0;
-  font-size: 17px;
-  line-height: 18px;
-  color: @cl-gray;
-  border: 0;
-  border-bottom: 2px solid @cl-black;
-}
-
-.knitting-form__textarea {
-  min-height: 142px;
-  padding: 15px 15px 15px 15px;
-  font-size: 17px;
-  line-height: 18px;
-  color: @cl-gray;
-  border: 2px solid @cl-gray;
 }
 
 .knitting-form__input-radio + .knitting-form__indicator-radio {
@@ -127,11 +133,21 @@
   border-radius: 50%;
 }
 
+.knitting-form__label-checkbox {
+  position: relative;
+  margin: 31px 0 12px 62px;
+  padding: 0 0 0 0;
+  font-family: @font-bold;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
 .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
   position: absolute;
   top: -10px;
   left: -62px;
-  width: 35px;
+  width: 36px;
   height: 35px;
   border: 2px solid @cl-gray;
 }
@@ -149,15 +165,48 @@
   transform: rotate(-45deg);
 }
 
+.knitting-form__input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 21px 0 0 0;
+}
+
+.knitting-form__label {
+  font-family: @font-bold;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.knitting-form__input-text,
+.knitting-form__input-tel,
+.knitting-form__input-email {
+  padding: 16px 0 17px 0;
+  font-size: 17px;
+  line-height: 18px;
+  color: @cl-gray;
+  border: 0;
+  border-bottom: 2px solid @cl-black;
+}
+
+.knitting-form__textarea {
+  min-width: 226px;
+  max-width: 226px;
+  min-height: 110px;
+  padding: 13px 15px 15px 15px;
+  font-size: 17px;
+  line-height: 18px;
+  color: @cl-gray;
+  border: 2px solid @cl-gray;
+}
+
 .knitting-form__button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   width: 268px;
-  height: 90px;
   margin: 0 auto;
-  padding: 20px 0 0 0;
+  padding: 17px 0 0 0;
 }
 
 .knitting-form__required {
@@ -166,22 +215,49 @@
 }
 
 .knitting-form__send {
+  margin: 23px 0 0 0;
   width: 260px;
 }
 
-
 @media @tablet-widths {
+  .knitting-form {
+    padding: 59px 0 52px 0;
+  }
+
   .knitting-form__desc {
     width: 668px;
+    padding: 0;
     font-size: 17px;
     line-height: 30px;
   }
 
   .knitting-form__fieldset {
-    padding: 20px 0 20px 0;
 
-    &--gray {
-      background-color: @cl-light-gray;
+    &--type {
+      padding: 46px 0 39px 0;
+    }
+
+    &--color {
+      padding: 49px 0 49px 0;
+      background-color: #f1f1f1;
+    }
+
+    &--name {
+      padding: 25px 0 67px 0;
+    }
+
+    &--tel {
+      padding: 51px 0 0 0;
+      background-color: #f1f1f1;
+    }
+
+    &--email {
+      padding: 22px 0 67px 0;
+      background-color: #f1f1f1;
+    }
+
+    &--additional {
+      padding: 64px 0 53px 0;
     }
 
   }
@@ -195,10 +271,33 @@
 
   .knitting-form__legend {
     width: 167px;
-    padding: 0;
 
     &::before {
       border: 0;
+    }
+
+    &--type {
+      padding: 27px 0 0 0;
+    }
+
+    &--color {
+      padding: 27px 0 0 0;
+    }
+
+    &--name {
+      padding: 39px 0 0 0;
+    }
+
+    &--tel {
+      padding: 17px 0 0 0;
+    }
+
+    &--email {
+      padding: 17px 0 0 0;
+    }
+
+    &--additional {
+      padding: 15px 0 0 0;
     }
   }
 
@@ -212,65 +311,105 @@
 
   .knitting-form__label-radio {
     width: 100%;
+    margin: 26px 0 32px 80px;
     font-size: 19px;
   }
 
+  .knitting-form__input-radio + .knitting-form__indicator-radio {
+    top: -14px;
+    left: -80px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .knitting-form__input-radio:checked + .knitting-form__indicator-radio::before {
+    top: 13px;
+    left: 13px;
+    width: 12px;
+    height: 12px;
+  }
 
   .knitting-form__label-checkbox {
-    width: 188px;
+    width: 158px;
+    margin: 26px 0 32px 80px;
     font-size: 19px;
+    cursor: pointer;
   }
 
-  .test-block {
-    width: 100%;
+  .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
+    top: -14px;
+    left: -80px;
+    width: 50px;
+    height: 48px;
   }
 
-  .knitting-form__label {
-    font-size: 19px;
+  .knitting-form__input-checkbox:checked + .knitting-form__indicator-checkbox::before {
+    top: 12px;
+    left: 10px;
+    width: 27px;
+    height: 13px;
   }
 
   .knitting-form__input-container {
     flex-direction: row;
     align-items: center;
     width: 100%;
+    padding: 22px 0 0 0;
   }
 
-  .knitting-form__input-text {
+  .knitting-form__label {
+    margin: 0 25px 0 0;
+    font-size: 19px;
+  }
+
+  .knitting-form__input-text,
+  .knitting-form__input-tel,
+  .knitting-form__input-email {
     flex-grow: 1;
-    padding-left: 18px;
+    padding: 16px 0 17px 16px;
     font-size: 19px;
   }
 
   .knitting-form__input-tel,
   .knitting-form__input-email {
-    flex-grow: 1;
-    padding-left: 18px;
-    font-size: 19px;
-    background-color: @cl-light-gray;
+    background-color: #f1f1f1;
   }
 
   .knitting-form__textarea {
-    width: 500px;
+    min-width: 466px;
+    max-width: 466px;
     font-size: 19px;
   }
-
 
   .knitting-form__button {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
     width: 668px;
+  }
+
+  .knitting-form__required {
+    margin: 8px 0 0 0;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .knitting-form__send {
     order: -1;
     width: 230px;
+    margin: 0;
   }
 }
 
-
 @media @desktop-widths {
+  .knitting-form {
+    padding: 103px 0 95px 0;
+  }
+
   .knitting-form__desc {
     width: 700px;
+    padding: 0;
   }
 
   .knitting-form__fieldset-wrapper {
@@ -279,18 +418,26 @@
 
   .knitting-form__legend {
     width: 175px;
+    text-align: center;
   }
 
   .knitting-form__fieldset-items {
-    width: 875px;
+    width: 761px;
   }
 
-  .knitting-form__label-checkbox {
-    width: 170px;
+  .knitting-form__input-text,
+  .knitting-form__input-tel,
+  .knitting-form__input-email {
+    margin-right: 61px;
   }
 
+  .knitting-form__textarea {
+    min-width: 666px;
+    max-width: 666px;
+  }
 
   .knitting-form__button {
     width: 700px;
+    padding: 40px 0 0 0;
   }
 }
