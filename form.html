@@ -11,9 +11,13 @@
       <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <button class="main-nav__toggle" type="button">Меню</button>
         <div class="main-nav__wrapper">
-          <div class="logo  logo--header">
+          <div class="main-nav__logo">
             <a href="index.html">
-              <img src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" alt="Интернет-магазин «Мишка»">
+              </picture>
             </a>
           </div>
           <ul class="main-nav__menu-list  main-nav__menu-list--main">
@@ -104,15 +108,15 @@
             <div class="knitting-form__fieldset-items">
               <div class="knitting-form__input-container">
                 <label class="knitting-form__label" for="name">Имя:</label>
-                <input class="knitting-form__input-text" type="text" name="name" id="name" placeholder="Введите ваше имя">
+                <input class="knitting-form__input-text" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
               </div>
               <div class="knitting-form__input-container">
                 <label class="knitting-form__label" for="surname">Фамилия:</label>
-                <input class="knitting-form__input-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию">
+                <input class="knitting-form__input-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
               </div>
               <div class="knitting-form__input-container">
                 <label class="knitting-form__label" for="patronymic">Отчество:</label>
-                <input class="knitting-form__input-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+                <input class="knitting-form__input-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете" required>
               </div>
             </div>
           </div>
@@ -121,7 +125,7 @@
           <div class="knitting-form__fieldset-wrapper">
             <h2 class="knitting-form__legend  knitting-form__legend--tel">Тел</h2>
             <div class="knitting-form__fieldset-items">
-              <input class="knitting-form__input-tel" type="tel" name="tel" placeholder="+7 XXX XX XX">
+              <input class="knitting-form__input-tel" type="tel" name="tel" placeholder="+7 XXX XX XX" required>
             </div>
           </div>
         </section>
@@ -129,7 +133,7 @@
           <div class="knitting-form__fieldset-wrapper">
             <h2 class="knitting-form__legend  knitting-form__legend--email">E-mail</h2>
             <div class="knitting-form__fieldset-items">
-              <input class="knitting-form__input-email" type="email" name="email" placeholder="Ваш Email">
+              <input class="knitting-form__input-email" type="email" name="email" placeholder="Ваш Email" required>
             </div>
           </div>
         </section>
@@ -137,7 +141,7 @@
           <div class="knitting-form__fieldset-wrapper">
             <h2 class="knitting-form__legend  knitting-form__legend--additional">Доп</h2>
             <div class="knitting-form__fieldset-items">
-              <textarea class="knitting-form__textarea" name="additional" id="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="knitting-form__textarea" name="additional" id="additional" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
             </div>
           </div>
         </section>
@@ -149,10 +153,8 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="logo  logo--footer">
-          <a href="#">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
-          </a>
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-link" href="index.html">Mishka</a>
         </div>
         <div class="social">
           <a class="social-btn  social-btn--instagram" href="#">Instagram</a>
@@ -160,11 +162,11 @@
           <a class="social-btn  social-btn--twitter" href="#">Twitter</a>
         </div>
         <div class="copyright">
-          <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" href="htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru">Разработано</a>
         </div>
       </div>
     </footer>
+    <script src="js/picturefill.min.js"></script>
     <script src="js/mobile-menu.js"></script>
   </body>
 </html>

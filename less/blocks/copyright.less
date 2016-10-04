@@ -1,28 +1,51 @@
 .copyright {
   margin: 0;
-  padding: 16px 0 24px 0;
-  text-align: center;
+  padding: 25px 0 31px 38px;
   border-top: 1px solid #e5e5e5;
 }
 
-.copyright__text {
-  display: inline-block;
-  vertical-align: middle;
+.copyright__link {
+  position: relative;
+  margin: 0;
+  padding: 0;
   font-family: @font-bold;
   font-size: 19px;
   font-weight: 700;
   line-height: 19px;
-}
+  text-decoration: none;
+  color: @cl-black;
 
-.copyright__link {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 0 20px;
-  padding: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -56px;
+    width: 27px;
+    height: 34px;
+    background-image: url("../img/logo-htmlacademy.svg");
+  }
+
+  &:hover::before {
+    background-image: url("../img/logo-htmlacademy-hvr.svg");
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:active::before {
+    background-image: url("../img/logo-htmlacademy-hvr.svg");
+    opacity: 0.3;
+  }
 }
 
 @media @tablet-widths {
   .copyright {
+    padding: 10px 56px 0 0;
     border: 0;
+  }
+
+  .copyright__link {
+
   }
 }

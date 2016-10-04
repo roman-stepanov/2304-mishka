@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: @cl-light-gray;
+  background-color: @cl-footerbackground;
 }
 
 .page-footer__wrapper {
@@ -9,14 +9,37 @@
   margin: 0 auto;
 }
 
+.page-footer__logo {
+  display: none;
+  cursor: pointer;
+}
+
 @media @tablet-widths {
   .page-footer__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 
     width: 668px;
+    padding: 51px 0 57px 0;
+  }
+
+  .page-footer__logo {
+    display: block;
+    width: 102px;
+    height: 35px;
+    font-size: 0;
+    background-image: url("../img/logo-footer.svg");
+    background-size: 102px 34px;
+    background-repeat: no-repeat;
+    &:hover {
+      background-image: url("../img/logo-footer-hvr.svg");
+    }
+
+    &:active {
+      background-image: url("../img/logo-footer-hvr.svg");
+      opacity: 0.3;
+    }
   }
 }
 

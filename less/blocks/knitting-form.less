@@ -9,10 +9,11 @@
   padding: 0;
   font-size: 13px;
   line-height: 24px;
-  color: @cl-gray;
+  color: @cl-text;
 }
 
 .knitting-form__fieldset {
+  position: relative;
 
   &--type {
     padding: 21px 0 0 0;
@@ -109,6 +110,7 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .knitting-form__input-radio + .knitting-form__indicator-radio {
@@ -117,7 +119,7 @@
   left: -62px;
   width: 35px;
   height: 35px;
-  border: 2px solid @cl-gray;
+  border: 2px solid @cl-text;
   border-radius: 50%;
 }
 
@@ -141,6 +143,7 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
@@ -149,7 +152,7 @@
   left: -62px;
   width: 36px;
   height: 35px;
-  border: 2px solid @cl-gray;
+  border: 2px solid @cl-text;
 }
 
 .knitting-form__input-checkbox:checked + .knitting-form__indicator-checkbox::before {
@@ -159,10 +162,20 @@
   left: 7px;
   width: 20px;
   height: 8px;
-  border: 3px solid @cl-gray;
+  border: 3px solid @cl-text;
   border-top-width: 0;
   border-right-width: 0;
   transform: rotate(-45deg);
+}
+
+.knitting-form__label-radio:hover .knitting-form__input-radio + .knitting-form__indicator-radio,
+.knitting-form__label-checkbox:hover .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
+  border-color: #62d1ba;
+}
+
+.knitting-form__label-radio:active .knitting-form__input-radio + .knitting-form__indicator-radio,
+.knitting-form__label-checkbox:active .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
+  border-color: #c7c7c7;
 }
 
 .knitting-form__input-container {
@@ -184,9 +197,44 @@
   padding: 16px 0 17px 0;
   font-size: 17px;
   line-height: 18px;
-  color: @cl-gray;
+  color: @cl-text;
   border: 0;
   border-bottom: 2px solid @cl-black;
+  outline: 0;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+
+  &:focus {
+    border-color: #62d1ba;
+  }
+
+  &:invalid {
+    border-color: #f0b1b1;
+  }
+}
+
+.knitting-form__input-tel {
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 227px 12px;
+}
+
+.knitting-form__input-tel:hover,
+.knitting-form__input-tel:focus {
+  background-image: url("../img/icon-phone-hvr.svg");
+}
+
+.knitting-form__input-email {
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 224px 12px;
+}
+
+.knitting-form__input-email:hover,
+.knitting-form__input-email:focus {
+  background-image: url("../img/icon-mail-hvr.svg");
 }
 
 .knitting-form__textarea {
@@ -196,8 +244,20 @@
   padding: 13px 15px 15px 15px;
   font-size: 17px;
   line-height: 18px;
-  color: @cl-gray;
-  border: 2px solid @cl-gray;
+  color: @cl-text;
+  border: 2px solid @cl-text;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+
+  &:focus {
+    border-color: #62d1ba;
+  }
+
+  &:invalid {
+    border-color: #f0b1b1;
+  }
 }
 
 .knitting-form__button {
@@ -239,7 +299,7 @@
 
     &--color {
       padding: 49px 0 49px 0;
-      background-color: #f1f1f1;
+      background-color: @cl-footerbackground;
     }
 
     &--name {
@@ -248,12 +308,12 @@
 
     &--tel {
       padding: 51px 0 0 0;
-      background-color: #f1f1f1;
+      background-color: @cl-footerbackground;
     }
 
     &--email {
       padding: 22px 0 67px 0;
-      background-color: #f1f1f1;
+      background-color: @cl-footerbackground;
     }
 
     &--additional {
@@ -333,7 +393,6 @@
     width: 158px;
     margin: 26px 0 32px 80px;
     font-size: 19px;
-    cursor: pointer;
   }
 
   .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
@@ -372,7 +431,15 @@
 
   .knitting-form__input-tel,
   .knitting-form__input-email {
-    background-color: #f1f1f1;
+    background-color: @cl-footerbackground;
+  }
+
+  .knitting-form__input-tel {
+    background-position: 450px 13px;
+  }
+
+  .knitting-form__input-email {
+    background-position: 447px 13px;
   }
 
   .knitting-form__textarea {
@@ -429,6 +496,14 @@
   .knitting-form__input-tel,
   .knitting-form__input-email {
     margin-right: 61px;
+  }
+
+  .knitting-form__input-tel {
+    background-position: 667px 15px;
+  }
+
+  .knitting-form__input-email {
+    background-position: 664px 15px;
   }
 
   .knitting-form__textarea {
