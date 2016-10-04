@@ -7,7 +7,7 @@
   margin: 0 0 0 -159px;
   padding: 30px 0 46px 0;
   width: 318px;
-  background-color: @cl-white;
+  background-color: @cl-mainbackground;
   border: 1px solid #c7c7c7;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.2);
 }
@@ -30,7 +30,7 @@
   font-size: 15px;
   line-height: 30px;
   text-align: center;
-  color: @cl-gray;
+  color: @cl-text;
 }
 
 .modal-size__toggles {
@@ -54,7 +54,7 @@
   font-weight: 700;
   line-height: 17px;
   text-align: center;
-  border: 2px solid #ececec;
+  border: 2px solid @cl-border;
   cursor: pointer;
 }
 
@@ -76,12 +76,15 @@
   font-weight: 700;
   line-height: 17px;
   text-transform: uppercase;
-  color: @cl-white;
+  color: @cl-mainbackground;
   background-color: @cl-turquoise;
   border: 0;
   cursor: pointer;
 }
 
+.modal-show {
+  display: block;
+}
 
 @media @tablet-widths {
   .modal-size {
