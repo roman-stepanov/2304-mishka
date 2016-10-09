@@ -208,10 +208,12 @@
 
   &:focus {
     border-color: #62d1ba;
+    outline: none;
   }
 
-  &:invalid {
+  &:focus:invalid {
     border-color: #f0b1b1;
+    outline: none;
   }
 }
 
@@ -226,6 +228,10 @@
   background-image: url("../img/icon-phone-hvr.svg");
 }
 
+.knitting-form__input-tel:focus:invalid {
+  background-image: url("../img/icon-phone.svg");
+}
+
 .knitting-form__input-email {
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
@@ -235,6 +241,10 @@
 .knitting-form__input-email:hover,
 .knitting-form__input-email:focus {
   background-image: url("../img/icon-mail-hvr.svg");
+}
+
+.knitting-form__input-email:focus:invalid {
+  background-image: url("../img/icon-mail.svg");
 }
 
 .knitting-form__textarea {
@@ -253,10 +263,12 @@
 
   &:focus {
     border-color: #62d1ba;
+    outline: none;
   }
 
-  &:invalid {
+  &:focus:invalid {
     border-color: #f0b1b1;
+    outline: none;
   }
 }
 
