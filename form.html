@@ -16,7 +16,7 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img src="img/logo-mobile.svg" alt="Интернет-магазин «Мишка»">
+                <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
               </picture>
             </a>
           </div>
@@ -60,14 +60,10 @@
           <div class="knitting-form__fieldset-wrapper">
             <h2 class="knitting-form__legend  knitting-form__legend--type">Тип</h2>
             <div class="knitting-form__fieldset-items">
-              <label class="knitting-form__label-radio" for="knitting-type1">
-                <input class="knitting-form__input-radio" type="radio" name="knitting-type" value="knitting-type1" id="knitting-type1" checked>
-                <span class="knitting-form__indicator-radio"></span>Аксессуар для интерьера
-              </label>
-              <label class="knitting-form__label-radio" for="knitting-type2">
-                <input class="knitting-form__input-radio" type="radio" name="knitting-type" value="knitting-type2" id="knitting-type2">
-                <span class="knitting-form__indicator-radio"></span>Детская игрушка
-              </label>
+              <input class="knitting-form__input-radio" type="radio" name="knitting-type" value="knitting-type1" id="knitting-type1" checked>
+              <label class="knitting-form__label-radio" for="knitting-type1">Аксессуар для интерьера</label>
+              <input class="knitting-form__input-radio" type="radio" name="knitting-type" value="knitting-type2" id="knitting-type2">
+              <label class="knitting-form__label-radio" for="knitting-type2">Детская игрушка</label>
             </div>
           </div>
         </section>
@@ -75,30 +71,18 @@
           <div class="knitting-form__fieldset-wrapper">
             <h2 class="knitting-form__legend  knitting-form__legend--color">Цвет</h2>
             <div class="knitting-form__fieldset-items">
-              <label class="knitting-form__label-checkbox" for="cl-white">
-                <input class="knitting-form__input-checkbox" type="checkbox" name="cl-white" id="cl-white" checked>
-                <span class="knitting-form__indicator-checkbox"></span>Белый
-              </label>
-              <label class="knitting-form__label-checkbox" for="cl-gray">
-                <input class="knitting-form__input-checkbox" type="checkbox" name="cl-gray" id="cl-gray" checked>
-                <span class="knitting-form__indicator-checkbox"></span>Серый
-              </label>
-              <label class="knitting-form__label-checkbox" for="cl-tiffany">
-                <input class="knitting-form__input-checkbox" type="checkbox" name="cl-tiffany" id="cl-tiffany">
-                <span class="knitting-form__indicator-checkbox"></span>«Тиффани»
-              </label>
-              <label class="knitting-form__label-checkbox" for="cl-black">
-                <input class="knitting-form__input-checkbox" type="checkbox" name="cl-black" id="cl-black">
-                <span class="knitting-form__indicator-checkbox"></span>Черный
-              </label>
-              <label class="knitting-form__label-checkbox" for="cl-pink">
-                <input class="knitting-form__input-checkbox" type="checkbox" name="cl-pink" id="cl-pink">
-                <span class="knitting-form__indicator-checkbox"></span>Розовый
-              </label>
-              <label class="knitting-form__label-checkbox" for="cl-orange">
-                <input class="knitting-form__input-checkbox" type="checkbox" name="cl-orange" id="cl-orange">
-                <span class="knitting-form__indicator-checkbox"></span>Оранжевый
-              </label>
+              <input class="knitting-form__input-checkbox" type="checkbox" name="cl-white" id="cl-white" checked>
+              <label class="knitting-form__label-checkbox" for="cl-white">Белый</label>
+              <input class="knitting-form__input-checkbox" type="checkbox" name="cl-gray" id="cl-gray" checked>
+              <label class="knitting-form__label-checkbox" for="cl-gray">Серый</label>
+              <input class="knitting-form__input-checkbox" type="checkbox" name="cl-tiffany" id="cl-tiffany">
+              <label class="knitting-form__label-checkbox" for="cl-tiffany">«Тиффани»</label>
+              <input class="knitting-form__input-checkbox" type="checkbox" name="cl-black" id="cl-black">
+              <label class="knitting-form__label-checkbox" for="cl-black">Черный</label>
+              <input class="knitting-form__input-checkbox" type="checkbox" name="cl-pink" id="cl-pink">
+              <label class="knitting-form__label-checkbox" for="cl-pink">Розовый</label>
+              <input class="knitting-form__input-checkbox" type="checkbox" name="cl-orange" id="cl-orange">
+              <label class="knitting-form__label-checkbox" for="cl-orange">Оранжевый</label>
             </div>
           </div>
         </section>
@@ -147,7 +131,7 @@
         </section>
         <section class="knitting-form__button">
           <span class="knitting-form__required">Все поля обязательны для заполнения</span>
-          <button class="btn knitting-form__send" type="submit">Отправить заказ</button>
+          <button class="btn btn--knitting-form" type="submit">Отправить заказ</button>
         </section>
       </form>
     </main>

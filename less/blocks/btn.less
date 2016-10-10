@@ -2,8 +2,8 @@
   display: block;
   margin: 0;
   padding: 14px 0 17px 0;
-  font-family: @font-bold;
   font-size: 17px;
+  font-weight: 700;
   line-height: 1;
   text-align: center;
   text-decoration: none;
@@ -19,5 +19,72 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--product-week {
+    width: 256px;
+  }
+
+  &--write-us {
+    width: 256px;
+    margin: 39px auto 0 auto;
+  }
+
+  &--production {
+    margin: 25px 0 0 0;
+  }
+
+  &--knitting-form {
+    margin: 23px 0 0 0;
+    width: 260px;
+  }
+}
+
+@media @tablet-widths {
+  .btn {
+
+    &--product-week {
+      width: 288px;
+    }
+
+    &--reviews {
+      position: absolute;
+      top: 79px;
+      right: 50px;
+      width: 171px;
+      margin: 0;
+    }
+
+    &--write-us {
+      width: 226px;
+      margin: 55px auto 0 auto;
+    }
+
+    &--production {
+      margin: 35px 0 0 0;
+    }
+
+    &--knitting-form {
+      order: -1;
+      width: 230px;
+      margin: 0;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .btn {
+
+    &--reviews {
+      right: 0;
+    }
+
+    &--write-us {
+      margin: 20px 0 0 0;
+    }
+
+    &--production {
+      margin: 46px 0 0 0;
+    }
   }
 }
