@@ -53,7 +53,6 @@
   position: relative;
   margin: 0;
   padding: 0;
-  font-family: @font-bold;
   font-size: 17px;
   line-height: 17px;
   text-transform: uppercase;
@@ -106,28 +105,28 @@
 .knitting-form__label-radio {
   position: relative;
   margin: 20px 0 10px 62px;
-  font-family: @font-bold;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: -62px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid @cl-text;
+    border-radius: 50%;
+  }
 }
 
-.knitting-form__input-radio + .knitting-form__indicator-radio {
-  position: absolute;
-  top: -11px;
-  left: -62px;
-  width: 35px;
-  height: 35px;
-  border: 2px solid @cl-text;
-  border-radius: 50%;
-}
-
-.knitting-form__input-radio:checked + .knitting-form__indicator-radio::before {
+.knitting-form__input-radio:checked + .knitting-form__label-radio::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 1px;
+  left: -50px;
   width: 5px;
   height: 5px;
   background-color: #62d1ba;
@@ -139,27 +138,27 @@
   position: relative;
   margin: 31px 0 12px 62px;
   padding: 0 0 0 0;
-  font-family: @font-bold;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -62px;
+    width: 36px;
+    height: 35px;
+    border: 2px solid @cl-text;
+  }
 }
 
-.knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
-  position: absolute;
-  top: -10px;
-  left: -62px;
-  width: 36px;
-  height: 35px;
-  border: 2px solid @cl-text;
-}
-
-.knitting-form__input-checkbox:checked + .knitting-form__indicator-checkbox::before {
+.knitting-form__input-checkbox:checked + .knitting-form__label-checkbox::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 7px;
+  top: 2px;
+  left: -53px;
   width: 20px;
   height: 8px;
   border: 3px solid @cl-text;
@@ -168,13 +167,13 @@
   transform: rotate(-45deg);
 }
 
-.knitting-form__label-radio:hover .knitting-form__input-radio + .knitting-form__indicator-radio,
-.knitting-form__label-checkbox:hover .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
+.knitting-form__label-radio:hover::before,
+.knitting-form__label-checkbox:hover::before {
   border-color: #62d1ba;
 }
 
-.knitting-form__label-radio:active .knitting-form__input-radio + .knitting-form__indicator-radio,
-.knitting-form__label-checkbox:active .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
+.knitting-form__label-radio:active::before,
+.knitting-form__label-checkbox:active::before {
   border-color: #c7c7c7;
 }
 
@@ -185,7 +184,6 @@
 }
 
 .knitting-form__label {
-  font-family: @font-bold;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
@@ -286,11 +284,6 @@
   line-height: 14px;
 }
 
-.knitting-form__send {
-  margin: 23px 0 0 0;
-  width: 260px;
-}
-
 @media @tablet-widths {
   .knitting-form {
     padding: 61px 0 52px 0;
@@ -385,18 +378,18 @@
     width: 100%;
     margin: 26px 0 32px 80px;
     font-size: 19px;
+
+    &::before {
+      top: -14px;
+      left: -80px;
+      width: 48px;
+      height: 48px;
+    }
   }
 
-  .knitting-form__input-radio + .knitting-form__indicator-radio {
-    top: -14px;
-    left: -80px;
-    width: 48px;
-    height: 48px;
-  }
-
-  .knitting-form__input-radio:checked + .knitting-form__indicator-radio::before {
-    top: 13px;
-    left: 13px;
+  .knitting-form__input-radio:checked + .knitting-form__label-radio::after {
+    top: 1px;
+    left: -65px;
     width: 12px;
     height: 12px;
   }
@@ -405,18 +398,18 @@
     width: 158px;
     margin: 26px 0 32px 80px;
     font-size: 19px;
+
+    &::before {
+      top: -14px;
+      left: -80px;
+      width: 50px;
+      height: 48px;
+    }
   }
 
-  .knitting-form__input-checkbox + .knitting-form__indicator-checkbox {
-    top: -14px;
-    left: -80px;
-    width: 50px;
-    height: 48px;
-  }
-
-  .knitting-form__input-checkbox:checked + .knitting-form__indicator-checkbox::before {
-    top: 12px;
-    left: 10px;
+  .knitting-form__input-checkbox:checked + .knitting-form__label-checkbox::after {
+    top: 1px;
+    left: -67px;
     width: 27px;
     height: 13px;
   }
@@ -472,12 +465,6 @@
     margin: 8px 0 0 0;
     font-size: 17px;
     line-height: 30px;
-  }
-
-  .knitting-form__send {
-    order: -1;
-    width: 230px;
-    margin: 0;
   }
 }
 
